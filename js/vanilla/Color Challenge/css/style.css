@@ -1,0 +1,19 @@
+body {
+    width: 100%
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+}
+
+#color {
+    padding: 0;
+    margin: 0;
+}
+
+#color div {
+    float: left;
+    width: 20%;
+    height: 200px;
+    padding: 0;
+    margin: 0;
+}
