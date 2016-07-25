@@ -15,6 +15,7 @@ body {
 
 #quizList li {
   font-size: 2em;
+  margin-bottom: 25px;
 }
 
 #quizList input {
@@ -35,4 +36,5 @@ body {
   border: solid 1px #3BB9FF;
   border-radius: 7px;
   background-color: #2C2C2C;
+  transition: .2s;
 }
