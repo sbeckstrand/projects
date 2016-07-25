@@ -1,0 +1,11 @@
+body {
+  background-color: green;
+}
+
+#nyan {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  left: -100px;
+}
