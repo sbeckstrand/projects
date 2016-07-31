@@ -4,8 +4,9 @@ body {
 
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
-
 .runHead {
   padding-top: 30px;
   text-align: center;
@@ -21,10 +22,29 @@ ul {
   font-size: 1.4em;
 }
 
-.starWars {
-  background-color: blue;
+.runInfoTable {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  margin-top: 60px;
 }
 
-.blah {
-  background-color: orange;
+.runInfoTable th, .runInfoTable td {
+  width: 33%;
+  text-align: center;
+  vertical-align: middle;
+
+}
+
+.runInfoTable li {
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.runInfoTable li:nth-child(5n) {
+  display: inline-block;
+}
+
+#kidUl {
+  display: block;
 }
