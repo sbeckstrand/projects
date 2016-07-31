@@ -1,4 +1,26 @@
 body {
-  background-color: black; !important
-  color: green;
+  font-family: 'Raleway', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.runHead {
+  padding-top: 30px;
+  text-align: center;
+}
+
+.runInfo {
+  padding-top: 30px;
+}
+
+.runInfo h4 {
+  line-height: .9;
+  font-weight: 500;
+  font-size: 1.4em;
+}
+
+.starWars {
+  background-color: blue;
 }
