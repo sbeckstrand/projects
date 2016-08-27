@@ -1,0 +1,7 @@
+.toDo, .done {
+  text-align: center;
+}
+
+.toDo .checkbox {
+  float: left;
+}
