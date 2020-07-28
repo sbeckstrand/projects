@@ -1,0 +1,13 @@
+body {
+  background-color: #333138;
+  font-family: 'Muli', sans-serif;
+}
+
+.text-success:hover {
+  background-color: #28a745;
+  color: white !important;
+}
+.text-danger:hover {
+  background-color: #dc3545;
+  color: white !important;
+}

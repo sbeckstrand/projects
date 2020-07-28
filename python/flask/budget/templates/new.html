@@ -1,0 +1,98 @@
+<!doctype html>
+  <html lang="en">
+    <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+      <!-- Custom CSS -->
+      <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+      <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+
+      <title>Budget</title>
+    </head>
+    <body>
+      <nav class="navbar navbar-light">
+        <a class="navbar-brand font-weight-bold" href="/">Budget</a>
+        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+      </nav>
+
+
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-md-9">
+            <h3 class="mt-5">Add Transaction</h3>
+            <form method="post" role="form">
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-4">
+                    <label for="name">Vendor</label>
+                    {{form.vendor(class_="form-control")}}
+                  </div>
+                  <div class="col-md-4">
+                    <label for="name">Date</label>
+                    {{form.date(class_="form-control")}}
+                  </div>
+                  <div class="col-md-4">
+                    <label for="name">Amount</label>
+                    {{form.amount(class_="form-control", step="0.01")}}
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <label for="name">Category</label>
+                    {{form.category(class_="form-control", onchange="updateChoices()")}}
+                  </div>
+                  <div class="col-md-4">
+                    <label for="name">Type</label>
+                    {{form.expenseType(class_="form-control")}}
+                  </div>
+                  <div class="col-md-4">
+                    <label for="name">Notes</label>
+                    {{form.notes(class_="form-control")}}
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-outline-info btn-md mt-3">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-9">
+            <h3 class="mt-5">Recent Transactions</h3>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Vendor</th>
+                  <th scope="col">Amount</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Category</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for result in results %}
+                <tr>
+                  <td>{{ result.vendor }}</td>
+                  <td>{{ result.amount }}</td>
+                  <td>{{ result.date }}</td>
+                  <td>{{ result.category }}</td>
+                  <td>{{ result.type }}</td>
+                  <td>{{ result.notes }}</td>
+                <tr>
+              {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script src="{{ url_for('static',filename='js/script.js') }}"></script>
+    </body>
+</html>
