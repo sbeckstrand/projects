@@ -5,17 +5,21 @@ import VueRouter from "vue-router";
 // Components
 import Login from "./views/Login"
 import Groups from "./views/Groups"
+import Index from "./views/Index"
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    components: {
-      default: Groups,
-      login: Login
-    },
+    name: "Index",
+    component: Index,
+    props: {
+      page: {
+        name: "Groups",
+        data: 'groups'
+    }
+  },
     meta: {}
   }
 ];

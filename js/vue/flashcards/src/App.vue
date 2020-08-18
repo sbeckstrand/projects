@@ -6,7 +6,6 @@
     </div>
 
     <div v-if="authenticated">
-      <h1>Hi {{ firstName }}!</h1>
       <router-view></router-view>
     </div>
   </div>
