@@ -3,8 +3,6 @@ import VueRouter from "vue-router";
 
 
 // Components
-import Login from "./views/Login"
-import Groups from "./views/Groups"
 import Index from "./views/Index"
 
 Vue.use(VueRouter);
@@ -22,6 +20,7 @@ const routes = [
   },
     meta: {}
   }
+
 ];
 
 const router = new VueRouter({
